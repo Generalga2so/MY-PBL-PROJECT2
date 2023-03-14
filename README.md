@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install nginx
 ```
 
-![poll mockup](./installing-nginx.png)
+![installing-nginx](https://user-images.githubusercontent.com/125014455/225077272-4daefec2-d5bd-4cdd-ab70-e043f3457680.png)
 
 ---
 
@@ -18,7 +18,7 @@ sudo apt install nginx
 sudo systemctl status nginx
 ```
 
-![poll mockup](./nginx-status.png)
+![nginx-status](https://user-images.githubusercontent.com/125014455/225077458-79758ef3-24b0-43bb-a506-9be2711907e3.png)
 
 ---
 
@@ -50,7 +50,7 @@ curl -s http://169.254.169.254/latest/meta-data/public-ipv4
 
 >The URL in browser shall also work if you do not specify port number since all web browsers use port 80 by default.
 
-![poll mockup](./welcome-nginx.png)
+![welcome-nginx](https://user-images.githubusercontent.com/125014455/225077567-ee51ba2b-9d45-489b-8fd8-ac06212fb1ca.png)
 
 ---
 
@@ -59,7 +59,6 @@ curl -s http://169.254.169.254/latest/meta-data/public-ipv4
 ---
 ---
 
-
 # INSTALLING MYSQL
 
 >Now that you have a web server up and running, you need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database. MySQL is a popular relational database management system used within PHP environments, so we will use it in our project.
@@ -67,7 +66,7 @@ Again, use ‘apt’ to acquire and install this software:
 $ sudo apt install mysql-server
 When prompted, confirm installation by typing Y, and then ENTER.
 
-![poll mockup](./mysql-install.png)
+![mysql-install](https://user-images.githubusercontent.com/125014455/225077730-701352b2-99dc-47dd-a2e0-916427841cc2.png)
 
 ---
 
@@ -78,7 +77,7 @@ $ sudo mysql
 
 >This will connect to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You should see output like this:
 
-![poll mockup](./sudo-mysql.png)
+![sudo-mysql](https://user-images.githubusercontent.com/125014455/225078566-cdacdee6-5263-4fba-bb8d-b0a7f85460d9.png)
 
 ---
 
@@ -99,7 +98,7 @@ sudo mysql_secure_installation
 >Note: Enabling this feature is something of a judgment call. If enabled, passwords which don’t match the specified criteria will be rejected by MySQL with an error. It is safe to leave validation disabled, but you should always use strong, unique passwords for database credentials.
 Answer Y for yes, or anything else to continue without enabling.
 
-![poll mockup](./msql-secure.png)
+![msql-secure](https://user-images.githubusercontent.com/125014455/225078726-14b857c3-0fc5-48c4-8339-212cabb8379d.png)
 
 ---
 
@@ -112,7 +111,7 @@ sudo mysql -p
 To exit the MySQL console, type:
 mysql> exit
 
-![poll mockup](./mysql-p.png)
+![mysql-p](https://user-images.githubusercontent.com/125014455/225078939-49c687fd-bf88-4246-a354-bca198d9f79c.png)
 
 ---
 
@@ -141,7 +140,7 @@ sudo apt install php-fpm php-mysql
 
 >You now have your PHP components installed. Next, you will configure Nginx to use them.
 
-![poll mockup](./install-php.png)
+![install-php](https://user-images.githubusercontent.com/125014455/225079103-02e49940-ff40-4e7f-afa1-cb1ed145feed.png)
 
 ---
 ---
@@ -161,7 +160,8 @@ sudo mkdir /var/www/projectLEMP
 ```
 sudo chown -R $USER:$USER /var/www/projectLEMP
 ```
-![poll mockup](./sudo-mkdir.png)
+
+![sudo-mkdir](https://user-images.githubusercontent.com/125014455/225079271-cf9b966c-bf38-4f34-9c16-6afb926de5e2.png)
 
 ---
 
@@ -197,7 +197,7 @@ server {
 }
 ```
 
-![poll mockup](./nano.png)
+![nano](https://user-images.githubusercontent.com/125014455/225079474-63b783de-28a3-4c06-8ade-a0f26c55a101.png)
 
 ---
 
@@ -219,7 +219,8 @@ nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
-![poll mockup](./nginx-t.png)
+![nginx-t](https://user-images.githubusercontent.com/125014455/225079625-3a8c4dfd-7579-4ae9-8a51-d835344bd73d.png)
+
 ---
 
 >If any errors are reported, go back to your configuration file to review its contents before continuing.
@@ -244,7 +245,7 @@ sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/met
 http://<Public-IP-Address>:80
 ```
 
-![poll mockup](./hello-lemp.png)
+![hello-lemp](https://user-images.githubusercontent.com/125014455/225079749-c5f90cbe-64a7-4048-a1bf-9d49c2d3588a.png)
 
 ---
 ---
@@ -267,8 +268,8 @@ sudo nano /var/www/projectLEMP/info.php
 <?php
 phpinfo();
 ```
+![nano-php](https://user-images.githubusercontent.com/125014455/225079819-491c5952-c334-471f-954e-e7ddcddd6316.png)
 
-![poll mockup](./nano-php.png)
 ---
 
 >You can now access this page in your web browser by visiting the domain name or public IP address you’ve set up in your Nginx configuration file, followed by /info.php:
@@ -278,7 +279,7 @@ http://`server_domain_or_IP`/info.php
 
 >You will see a web page containing detailed information about your server:
 
-![poll mockup](./php.png)
+![php](https://user-images.githubusercontent.com/125014455/225079889-1725ab64-7fef-489b-8682-507724438aa0.png)
 
 ---
 
@@ -347,7 +348,8 @@ Output
 +--------------------+
 2 rows in set (0.000 sec)
 ```
-![poll mockup](./mysql-u-example.png)
+
+![mysql-u-example](https://user-images.githubusercontent.com/125014455/225080075-52f00cce-996b-4914-931c-d6a4094c86dc.png)
 
 ---
 >Next, we’ll create a test table named todo_list. From the MySQL console, run the following statement:
@@ -383,7 +385,7 @@ Output
 4 rows in set (0.000 sec)
 ```
 
-![poll mockup](./select-from-example.png)
+![select-from-example](https://user-images.githubusercontent.com/125014455/225080229-36f3c95e-d794-440a-b730-bae20ddf477e.png)
 
 ---
 
@@ -417,7 +419,7 @@ try {
 }
 ```
 
-![poll mockup](./nano-example.png)
+ file:///home/aoa-clothings/Documents/DEVOPS/PBL%20Project/project%202/nano-example.png
 
 >Save and close the file when you are done editing.
 
@@ -427,7 +429,7 @@ http://<Public_domain_or_IP>/todo_list.php
 ```
 You should see a page like this, showing the content you’ve inserted in your test table:
 
-![poll mockup](./todo-list.png)
+![todo-list](https://user-images.githubusercontent.com/125014455/225080467-9616b85f-3543-4298-80b5-eaf88ad53d18.png)
 
 ---
 
