@@ -72,7 +72,7 @@ When prompted, confirm installation by typing Y, and then ENTER.
 
 >When the installation is finished, log in to the MySQL console by typing:
 ```
-$ sudo mysql
+sudo mysql
 ```
 
 >This will connect to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You should see output like this:
@@ -369,20 +369,6 @@ mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first import
 >To confirm that the data was successfully saved to your table, run:
 ```
 mysql> SELECT * FROM example_database.todo_list;
-```
-
->You’ll see the following output:
-```
-Output
-+---------+--------------------------+
-| item_id | content              	|
-+---------+--------------------------+
-|   	1 | My first important item  |
-|   	2 | My second important item |
-|   	3 | My third important item  |
-|   	4 | and this one more thing  |
-+---------+--------------------------+
-4 rows in set (0.000 sec)
 ```
 
 ![select-from-example](https://user-images.githubusercontent.com/125014455/225080229-36f3c95e-d794-440a-b730-bae20ddf477e.png)
